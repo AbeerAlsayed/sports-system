@@ -4,12 +4,8 @@ namespace App\Http\Controllers\Api;
 
 use App\Helpers\ImageHelper;
 use App\Http\Controllers\BaseController;
-<<<<<<< HEAD
 use App\Http\Requests\Facility\storeFacilityRequest;
-=======
-use App\Http\Controllers\Controller;
-use App\Http\Requests\facility\storeFacilityRequest;
->>>>>>> Div
+
 use App\Models\facility;
 use Exception;
 use Illuminate\Http\Request;

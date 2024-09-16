@@ -29,24 +29,6 @@ class RoomController extends Controller
         }
     }
 
-    public function getTotalRoom()
-    {
-        try {
-            $rooms= Room::count();
-            if ($rooms) {
-                return response()->json([
-                    'success' => true,
-                    'rooms' => $rooms,
-                ]);
-            }
-        } catch (Exception $e) {
-            return response()->json([
-                'success' => false,
-                'message' => $e->getMessage(),
-            ]);
-        }
-    }
-
     public function store(Request $request)
     {
         try {

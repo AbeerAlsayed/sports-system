@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\ImageHelper;
 use App\Http\Requests\StoreUserRequest;
 use App\Models\User;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
@@ -17,7 +17,7 @@ class UserController extends Controller
     }
     public function store(StoreUserRequest $request)
     {
-        User::create([
+        $user=User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
@@ -26,6 +26,7 @@ class UserController extends Controller
             'gender' => $request->gender,
             'specialization' => $request->specialization,
         ]);
+        ImageHelper::handleFileUpload($request, $user);
 
         return redirect()->route('users.index');
     }

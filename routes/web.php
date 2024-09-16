@@ -1,28 +1,16 @@
 <?php
 
-<<<<<<< HEAD
-use App\Http\Controllers\Api\UserController;
+
+
 use App\Http\Controllers\ProfileController;
-=======
-use App\Http\Controllers\ProfileController;
+
 use App\Http\Controllers\UserController;
->>>>>>> Div
 use Illuminate\Support\Facades\Route;
 
 Route::get('/',[UserController::class,'index'])->name('users.index');
 Route::get('/users',[UserController::class,'create'])->name('users.create');
 Route::post('/users',[UserController::class,'store'])->name('users.store');
 
-
-<<<<<<< HEAD
-Route::get('users',[UserController::class,'index'])->name('users.index');
-Route::post('users',[UserController::class,'store'])->name('users.store');
-
-=======
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
->>>>>>> Div
 
 /**
  * @return void

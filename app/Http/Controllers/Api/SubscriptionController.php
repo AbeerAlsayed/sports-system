@@ -3,14 +3,9 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\BaseController;
-<<<<<<< HEAD
 use App\Http\Requests\Subscription\storeSubscriptionRequest;
 use App\Http\Requests\Subscription\updateSubscriptionRequest;
-=======
-use App\Http\Controllers\Controller;
-use App\Http\Requests\subscription\storeSubscriptionRequest;
-use App\Http\Requests\subscription\updateSubscriptionRequest;
->>>>>>> Div
+
 use App\Models\Subscription;
 
 class SubscriptionController extends BaseController
